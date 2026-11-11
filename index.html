@@ -1,161 +1,216 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>プライバシーポリシー | Bg (BgRec)</title>
-    <style>
-        :root {
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --text-color: #1e293b;
-            --text-muted: #64748b;
-            --primary: #2563eb;
-            --border-color: #e2e8f0;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.7;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 40px 20px;
-        }
-        .container {
-            max-width: 760px;
-            margin: 0 auto;
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-            border: 1px solid var(--border-color);
-        }
-        h1 {
-            font-size: 1.75rem;
-            margin-top: 0;
-            padding-bottom: 16px;
-            border-bottom: 2px solid var(--border-color);
-            color: var(--text-color);
-        }
-        h2 {
-            font-size: 1.25rem;
-            margin-top: 32px;
-            color: var(--primary);
-            border-left: 4px solid var(--primary);
-            padding-left: 10px;
-        }
-        h3 {
-            font-size: 1.05rem;
-            margin-top: 20px;
-            color: var(--text-color);
-        }
-        p, ul {
-            margin: 12px 0;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 6px;
-        }
-        .meta-info {
-            background-color: #f1f5f9;
-            padding: 16px;
-            border-radius: 8px;
-            font-size: 0.95rem;
-            margin-bottom: 24px;
-        }
-        .highlight-box {
-            background-color: #eff6ff;
-            border: 1px solid #bfdbfe;
-            border-radius: 8px;
-            padding: 16px;
-            margin: 20px 0;
-            font-size: 0.95rem;
-        }
-        code {
-            background: #f1f5f9;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-size: 0.9em;
-            color: #d97706;
-        }
-        footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
-            text-align: center;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="estechfy（Estechfy合同会社）の公式公開情報ポータル。提供アプリケーションの紹介、プライバシーポリシー、利用規約、サポート情報をまとめています。">
+  <title>estechfy 公開情報ポータル | Estechfy合同会社</title>
+  <link rel="canonical" href="https://estechfy.github.io/public/">
+  <link rel="stylesheet" href="assets/site.css">
+  <style>
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin: 28px 0;
+    }
+    .project-card {
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    }
+    .project-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .project-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    .project-title {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.3;
+    }
+    .project-desc {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+      margin: 0 0 20px;
+      flex-grow: 1;
+    }
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+    }
+  </style>
 </head>
 <body>
-<nav style="max-width:760px;margin:0 auto 20px"><a href="./apps/">アプリ公開情報</a> · <a href="./fastplayer/">FastPlayer</a></nav>
+  <a class="skip" href="#main">本文へ移動</a>
+  <header class="wrap top">
+    <a class="brand" href="./">
+      <span>estechfy</span>
+    </a>
+    <nav aria-label="ナビゲーション">
+      <a href="#projects">プロダクト</a>
+      <a href="#policy">基本方針</a>
+      <a href="#about">会社情報</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </header>
 
-<div class="container">
-    <h1>プライバシーポリシー (Privacy Policy)</h1>
+  <main class="wrap" id="main">
+    <section class="hero">
+      <div>
+        <span class="eyebrow">ESTECHFY PUBLIC PORTAL</span>
+        <h1>テクノロジーで、<br>毎日の道具をもっと快適に。</h1>
+        <p class="lead">
+          estechfy（Estechfy合同会社）の公開ポータルです。提供するアプリケーションの紹介、利用規約、プライバシーポリシー、サポート情報などをプロジェクト別に一元管理・公開しています。
+        </p>
+        <span class="tag">プライバシー最優先 · 独立設計 · 高性能</span>
+      </div>
+    </section>
 
-    <div class="meta-info">
-        <strong>アプリ名:</strong> Bg (BgRec)<br>
-        <strong>開発者 / 提供者:</strong> estechfy<br>
-        <strong>連絡先:</strong> support@estechfy.com<br>
-        <strong>制定日:</strong> 2026年8月16日<br>
-        <strong>最終更新日:</strong> 2026年10月11日
+    <section class="section" id="projects">
+      <h2>提供プロダクト / プロジェクト</h2>
+      <p class="lead">各プロジェクトごとの詳細情報、プライバシーポリシー、利用規約をご確認いただけます。</p>
+
+      <div class="project-grid">
+        <!-- FastPlayer -->
+        <article class="project-card">
+          <div>
+            <div class="project-header">
+              <img src="fastplayer/assets/fastplayer-logo.png" alt="FastPlayer" class="project-icon">
+              <div>
+                <h3 class="project-title">FastPlayer</h3>
+                <span class="small">macOS 向けメディアプレイヤー</span>
+              </div>
+            </div>
+            <p class="project-desc">
+              Apple Silicon搭載Macの性能を最大限に引き出す高速・省電力な動画プレイヤー＆コミックリーダー。二重字幕・辞書学習、無音自動スキップ、10バンドイコライザー、Googleアカウントと連携したローカル動画保護（暗号化）を搭載。
+            </p>
+          </div>
+          <div class="project-links">
+            <a class="button" href="fastplayer/">公式ページ & サポート</a>
+            <a class="button secondary" href="fastplayer/privacy/">プライバシー</a>
+            <a class="button secondary" href="fastplayer/terms/">利用規約</a>
+          </div>
+        </article>
+
+        <!-- Dareka -->
+        <article class="project-card">
+          <div>
+            <div class="project-header">
+              <img src="dareka/assets/dareka-logo.png" alt="Dareka" class="project-icon">
+              <div>
+                <h3 class="project-title">Dareka</h3>
+                <span class="small">名刺管理・着信表示・プライベート電話帳</span>
+              </div>
+            </div>
+            <p class="project-desc">
+              標準連絡先を汚さない専用プライベート電話帳・発信者識別・端末内AI名刺管理アプリ（<code>com.estechfy.dareka</code>）。連絡先や名刺データは端末内・本人のプライベートストレージで安全に管理します。
+            </p>
+          </div>
+          <div class="project-links">
+            <a class="button" href="dareka/">公式ページ</a>
+            <a class="button secondary" href="dareka/privacy/">プライバシー</a>
+            <a class="button secondary" href="dareka/terms/">利用規約</a>
+            <a class="button secondary" href="dareka/delete-account/">データ削除</a>
+          </div>
+        </article>
+
+        <!-- Bg (BgRec) -->
+        <article class="project-card">
+          <div>
+            <div class="project-header">
+              <div class="project-icon" style="background: #2563eb; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:bold; font-size:20px;">Bg</div>
+              <div>
+                <h3 class="project-title">Bg (BgRec)</h3>
+                <span class="small">Android 向けバックグラウンド録画</span>
+              </div>
+            </div>
+            <p class="project-desc">
+              日常の記録を安全に行うためのバックグラウンド録画・録音アプリケーション。広告SDKを一切含まず、撮影・録音データはすべて端末内で安全に完結します。
+            </p>
+          </div>
+          <div class="project-links">
+            <a class="button secondary" href="bg/privacy/">プライバシーポリシー</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="policy">
+      <h2>データ取り扱いとプライバシー方針</h2>
+      <p>
+        estechfy では、すべてのプロダクトにおいて「ユーザーのプライバシー保護」と「安全なデータ管理」を最優先事項として設計しています。
+      </p>
+      <div class="cards">
+        <article class="card">
+          <h3>不要な収集・追跡を行わない</h3>
+          <p>広告トラッキングSDKや行動監視ツールの組み込みを行わず、アプリの動作に本質的に不要な個人情報の収集は行いません。</p>
+        </article>
+        <article class="card">
+          <h3>端末ローカル完結の原則</h3>
+          <p>ユーザーの動画やメディアファイル等の重要なコンテンツは、原則として利用者の手元（端末内）で処理・保護します。</p>
+        </article>
+        <article class="card">
+          <h3>透明性の高い情報開示</h3>
+          <p>各アプリのデータアクセス権限（OAuthやシステムパーミッション）の用途と保存先を明確に開示します。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <h2>会社情報</h2>
+      <div class="notice">
+        <p>
+          <strong>Estechfy合同会社（estechfy LLC）</strong><br>
+          テクノロジーとソフトウェアエンジニアリングを通じて、生活や学習を支える堅牢な道具を創出しています。<br>
+          公式サイト：<a href="https://estechfy.com/">https://estechfy.com/</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>お問い合わせ</h2>
+      <p>
+        製品に関するお問い合わせ、不具合のご報告、サポートのご依頼は下記メールアドレスまでお願いいたします。
+      </p>
+      <p>
+        サポート窓口：<a href="mailto:support@estechfy.com">support@estechfy.com</a>
+      </p>
+      <p class="small">
+        ※ お問い合わせの際は、ご利用中の製品名、OSバージョン、発生している事象の詳細をお書き添えください。パスワードや秘密鍵等の機密情報は送信しないでください。
+      </p>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <div class="links">
+      <a href="./">トップ</a>
+      <a href="fastplayer/">FastPlayer</a>
+      <a href="dareka/">Dareka</a>
+      <a href="bg/privacy/">Bg (BgRec)</a>
+      <a href="https://github.com/estechfy/public">GitHub Repository</a>
     </div>
-
-    <p>「Bg」（以下、「本アプリ」といいます）は、ユーザーのプライバシーを最重要視し、ユーザーの個人情報の保護に最大限の配慮を払っています。本プライバシーポリシーでは、本アプリにおける個人情報およびデータの取り扱い方針について説明します。</p>
-
-    <div class="highlight-box">
-        <strong>データの取り扱い:</strong><br>
-        撮影・録音データと利用回数・設定は端末内で管理し、開発者の分析サーバーへ自動送信する機能はありません。購入・復元、更新確認、評価の送信にはGoogle Playのサービスと通信することがあります。広告SDKは含まれていません。
-    </div>
-
-    <h2>1. 取得する情報および利用目的</h2>
-    <p>本アプリは、以下のハードウェア権限を利用しますが、撮影・録音データを開発者のサーバーへ自動送信しません。</p>
-
-    <h3>(1) カメラ機能 (<code>CAMERA</code>, <code>FOREGROUND_SERVICE_CAMERA</code>)</h3>
-    <ul>
-        <li><strong>利用目的:</strong> ユーザーの操作に基づき、画面消灯時を含むバックグラウンドでの動画録画および写真撮影を行うために使用します。</li>
-        <li><strong>データの保存先:</strong> 端末のアプリ専用領域に保存します。フォトへの保存を有効にした場合は共有メディア領域にも保存します。フォト管理アプリのクラウド同期は、そのサービスの設定・ポリシーに従います。</li>
-    </ul>
-
-    <h3>(2) マイク・音声録音機能 (<code>RECORD_AUDIO</code>, <code>FOREGROUND_SERVICE_MICROPHONE</code>)</h3>
-    <ul>
-        <li><strong>利用目的:</strong> 動画録画時の音声収録、および単体でのバックグラウンド音声録音（ボイスレコーダー機能）のために使用します。</li>
-        <li><strong>データの保存先:</strong> 録音された音声データは、デバイス内のアプリ専用領域にのみ保存されます。</li>
-    </ul>
-
-    <h3>(3) フォアグラウンドサービス (<code>FOREGROUND_SERVICE</code>)</h3>
-    <ul>
-        <li><strong>利用目的:</strong> 画面消灯時や他アプリ使用時でもOSによって録画・録音プロセスが強制終了されるのを防ぎ、安定した動作を継続するために使用します。</li>
-    </ul>
-
-    <h3>(4) アプリ内課金機能 (<code>BILLING</code>)</h3>
-    <ul>
-        <li><strong>利用目的:</strong> Google Play Billing システムを通じて、Pro版ライセンスの購入処理および購入状態の確認（復元）を行うために使用します。決済情報は Google Play によって安全に管理され、本アプリがクレジットカード情報等を取得・保持することはありません。</li>
-    </ul>
-
-    <h2>2. データの外部送信・第三者提供について</h2>
-    <p>撮影・録音データは端末内で管理します。Google Playでの購入・復元、更新確認、評価の送信にはGoogle Playと通信することがあり、その処理にはGoogleのプライバシーポリシーが適用されます。</p>
-    <ul>
-        <li><strong>広告SDKの不使用:</strong> 第三者による広告配信やユーザー追跡用のSDKは一切組み込まれていません。</li>
-        <li><strong>外部送信なし:</strong> 撮影・録音データを本アプリから開発者のサーバーへ自動送信しません。</li>
-        <li><strong>ユーザーによる明示的共有:</strong> ユーザー自身がアプリ内の共有機能を用いて能動的に指定先へ送信した場合にのみ、データが共有されます。</li>
-    </ul>
-
-    <h2>3. 保存と削除</h2><p>記録ファイルはファイル画面から削除できます。共有メディア領域や共有先のコピーは各保存先で削除してください。試用回数、購入の確認状態、設定、端末内の利用集計は端末内に保存します。バックアップ対象データはAndroidのバックアップ設定に従うことがあります。決済記録はGoogle Playで管理されます。</p>
-<h2>4. お問い合わせ窓口</h2>
-    <p>本プライバシーポリシーまたは本アプリにおけるデータの取り扱いに関するご質問・ご要望は、下記のお問い合わせ先までご連絡ください。</p>
-    <ul>
-        <li><strong>開発元:</strong> estechfy</li>
-        <li><strong>メールアドレス:</strong> <a href="mailto:support@estechfy.com">support@estechfy.com</a></li>
-    </ul>
-
-    <footer>
-        &copy; 2026 estechfy. All rights reserved.
-    </footer>
-</div>
-
+    <p>&copy; 2026 estechfy · Estechfy合同会社</p>
+  </footer>
 </body>
 </html>
