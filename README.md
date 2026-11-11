@@ -84,7 +84,7 @@ public/
   - Dareka では連絡先・名刺データを外部サーバーへ勝手に送信せず、端末内および本人のプライベートストレージで管理します。
   - BgRec では第三者広告SDKを含まず、録画・録音データはすべて端末内で完結します。
 - **公開用情報のみの配置**: アプリの非公開ソースコード、OAuth クライアント秘密情報、認証トークン、暗号鍵、利用者の実データ、内部開発ログなどは一切含めません。
-- **オープンソース・ライセンス情報**: オープンソース部品の配布およびライセンス再リンクキットは専用リポジトリ（例: `https://github.com/estechfy/fastplayer-compliance`）で管理・公開します。
+- **オープンソース・ライセンス情報**: 公開する対応ソース・ライセンス・再リンクキットも本リポジトリに統合します。FastPlayerは [`fastplayer/compliance/`](fastplayer/compliance/) と、このリポジトリの `fastplayer-` 接頭辞付きGitHub Releasesで管理・公開します。
 
 ---
 
@@ -104,3 +104,7 @@ public/
 ---
 
 お問い合わせ：<support@estechfy.com>
+
+## ローカル管理フォルダー
+
+`/Users/itoshinji/GitHub/public` を使用します。公開対象の資料は各プロジェクト配下に配置し、Release添付物の取得キャッシュはGit管理外の `.local/` に置きます。

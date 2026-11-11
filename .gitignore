@@ -1,0 +1,3 @@
+# Release添付物の取得・検証用キャッシュ。Git管理には含めない。
+.local/
+.DS_Store
