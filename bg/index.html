@@ -1,161 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>プライバシーポリシー | Bg (BgRec)</title>
-    <style>
-        :root {
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --text-color: #1e293b;
-            --text-muted: #64748b;
-            --primary: #2563eb;
-            --border-color: #e2e8f0;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.7;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 40px 20px;
-        }
-        .container {
-            max-width: 760px;
-            margin: 0 auto;
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-            border: 1px solid var(--border-color);
-        }
-        h1 {
-            font-size: 1.75rem;
-            margin-top: 0;
-            padding-bottom: 16px;
-            border-bottom: 2px solid var(--border-color);
-            color: var(--text-color);
-        }
-        h2 {
-            font-size: 1.25rem;
-            margin-top: 32px;
-            color: var(--primary);
-            border-left: 4px solid var(--primary);
-            padding-left: 10px;
-        }
-        h3 {
-            font-size: 1.05rem;
-            margin-top: 20px;
-            color: var(--text-color);
-        }
-        p, ul {
-            margin: 12px 0;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 6px;
-        }
-        .meta-info {
-            background-color: #f1f5f9;
-            padding: 16px;
-            border-radius: 8px;
-            font-size: 0.95rem;
-            margin-bottom: 24px;
-        }
-        .highlight-box {
-            background-color: #eff6ff;
-            border: 1px solid #bfdbfe;
-            border-radius: 8px;
-            padding: 16px;
-            margin: 20px 0;
-            font-size: 0.95rem;
-        }
-        code {
-            background: #f1f5f9;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-size: 0.9em;
-            color: #d97706;
-        }
-        footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
-            text-align: center;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Bg (BgRec)は、画面消灯中や他アプリ操作中も安定してバックグラウンド録画・録音を行えるAndroid向けキャプチャツールです。完全オフライン・広告なし。">
+  <title>Bg (BgRec) — 画面オフ録音＆バックグラウンド録画 | estechfy</title>
+  <link rel="canonical" href="https://estechfy.github.io/public/bg/">
+  <link rel="icon" type="image/png" href="assets/bg-logo.png">
+  <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-<nav style="max-width:760px;margin:0 auto 20px"><a href="./apps/">アプリ公開情報</a> · <a href="./fastplayer/">FastPlayer</a></nav>
+  <a class="skip" href="#main">本文へ移動</a>
+  <header class="wrap top">
+    <a class="brand" href="./"><img src="assets/bg-logo.png" width="40" height="40" alt="">Bg (BgRec)</a>
+    <nav aria-label="ナビゲーション">
+      <a href="./">ホーム</a>
+      <a href="privacy/">プライバシーポリシー</a>
+      <a href="./#support">サポート</a>
+      <a href="../">公開ポータル</a>
+    </nav>
+  </header>
+  <main class="wrap" id="main">
+    <section class="hero">
+      <div>
+        <span class="eyebrow">BACKGROUND RECORDER · ESTECHFY</span>
+        <h1>画面を伏せたまま、<br>大切な瞬間を確実に記録。</h1>
+        <p class="lead">Bg（BgRec）は、スマートフォンの画面を消灯した状態（端末ロック中）や、他のアプリを操作している最中でも、安定して動画撮影・音声録音を行えるバックグラウンド専用キャプチャツールです。</p>
+        <span class="tag">Android 対応 · 完全オフライン · 外部送信ゼロ · 広告なし</span>
+      </div>
+      <img src="assets/bg-logo.png" width="200" height="200" alt="Bg (BgRec)のアプリアイコン">
+    </section>
 
-<div class="container">
-    <h1>プライバシーポリシー (Privacy Policy)</h1>
+    <section class="section">
+      <h2>主な機能とユースケース</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>画面オフ・バックグラウンド録画</h3>
+          <p>画面消灯時や他アプリ使用時でも、フォアグラウンドサービスにより途切れずに安定録画。画面点灯による発熱やバッテリー消費を抑えながら長時間の記録が可能です。</p>
+        </article>
+        <article class="card">
+          <h3>高音質ボイスレコーダー（音声専用モード）</h3>
+          <p>カメラを起動せず音声のみを記録する省電力モード（AAC 48kHz）。商談の議事録、講義、日常のボイスメモをスマホを伏せたままクリアに記録できます。</p>
+        </article>
+        <article class="card">
+          <h3>外部ボタン・自動化連携</h3>
+          <p>ポケットの中のBluetoothボタンやMacroDroidなどの外部連携から、画面を点灯することなく即座に録画・録音の開始・停止を行えます。</p>
+        </article>
+      </div>
+    </section>
 
-    <div class="meta-info">
-        <strong>アプリ名:</strong> Bg (BgRec)<br>
-        <strong>開発者 / 提供者:</strong> estechfy<br>
-        <strong>連絡先:</strong> support@estechfy.com<br>
-        <strong>制定日:</strong> 2026年8月16日<br>
-        <strong>最終更新日:</strong> 2026年10月11日
+    <section class="section">
+      <h2>プライバシーとデータの取り扱い</h2>
+      <div class="notice">
+        <p><strong>撮影・録音データの外部送信や広告SDKは一切ありません。</strong><br>
+        撮影された動画・写真および録音データは、端末内のアプリ専用保護領域にのみ安全に保存されます。開発者サーバーへの自動送信機能はなく、第三者トラッキングツールも組み込まれていません。Google Play決済情報はGoogle Playによって安全に管理されます。</p>
+      </div>
+      <div class="actions">
+        <a class="button" href="privacy/">プライバシーポリシーを確認</a>
+      </div>
+    </section>
+
+    <section class="section" id="support">
+      <h2>サポート・お問い合わせ</h2>
+      <p>提供者は <strong>estechfy（Estechfy合同会社）</strong> です。ご質問・不具合のご報告・ご意見は下記窓口までご連絡ください。</p>
+      <p>サポート窓口：<a href="mailto:support@estechfy.com">support@estechfy.com</a></p>
+    </section>
+  </main>
+  <footer class="wrap footer">
+    <div class="links">
+      <a href="privacy/">プライバシーポリシー</a>
+      <a href="assets/bg-logo.png" download="bg-logo.png">ロゴPNG</a>
+      <a href="../">estechfy 公開ポータル</a>
     </div>
-
-    <p>「Bg」（以下、「本アプリ」といいます）は、ユーザーのプライバシーを最重要視し、ユーザーの個人情報の保護に最大限の配慮を払っています。本プライバシーポリシーでは、本アプリにおける個人情報およびデータの取り扱い方針について説明します。</p>
-
-    <div class="highlight-box">
-        <strong>データの取り扱い:</strong><br>
-        撮影・録音データと利用回数・設定は端末内で管理し、開発者の分析サーバーへ自動送信する機能はありません。購入・復元、更新確認、評価の送信にはGoogle Playのサービスと通信することがあります。広告SDKは含まれていません。
-    </div>
-
-    <h2>1. 取得する情報および利用目的</h2>
-    <p>本アプリは、以下のハードウェア権限を利用しますが、撮影・録音データを開発者のサーバーへ自動送信しません。</p>
-
-    <h3>(1) カメラ機能 (<code>CAMERA</code>, <code>FOREGROUND_SERVICE_CAMERA</code>)</h3>
-    <ul>
-        <li><strong>利用目的:</strong> ユーザーの操作に基づき、画面消灯時を含むバックグラウンドでの動画録画および写真撮影を行うために使用します。</li>
-        <li><strong>データの保存先:</strong> 端末のアプリ専用領域に保存します。フォトへの保存を有効にした場合は共有メディア領域にも保存します。フォト管理アプリのクラウド同期は、そのサービスの設定・ポリシーに従います。</li>
-    </ul>
-
-    <h3>(2) マイク・音声録音機能 (<code>RECORD_AUDIO</code>, <code>FOREGROUND_SERVICE_MICROPHONE</code>)</h3>
-    <ul>
-        <li><strong>利用目的:</strong> 動画録画時の音声収録、および単体でのバックグラウンド音声録音（ボイスレコーダー機能）のために使用します。</li>
-        <li><strong>データの保存先:</strong> 録音された音声データは、デバイス内のアプリ専用領域にのみ保存されます。</li>
-    </ul>
-
-    <h3>(3) フォアグラウンドサービス (<code>FOREGROUND_SERVICE</code>)</h3>
-    <ul>
-        <li><strong>利用目的:</strong> 画面消灯時や他アプリ使用時でもOSによって録画・録音プロセスが強制終了されるのを防ぎ、安定した動作を継続するために使用します。</li>
-    </ul>
-
-    <h3>(4) アプリ内課金機能 (<code>BILLING</code>)</h3>
-    <ul>
-        <li><strong>利用目的:</strong> Google Play Billing システムを通じて、Pro版ライセンスの購入処理および購入状態の確認（復元）を行うために使用します。決済情報は Google Play によって安全に管理され、本アプリがクレジットカード情報等を取得・保持することはありません。</li>
-    </ul>
-
-    <h2>2. データの外部送信・第三者提供について</h2>
-    <p>撮影・録音データは端末内で管理します。Google Playでの購入・復元、更新確認、評価の送信にはGoogle Playと通信することがあり、その処理にはGoogleのプライバシーポリシーが適用されます。</p>
-    <ul>
-        <li><strong>広告SDKの不使用:</strong> 第三者による広告配信やユーザー追跡用のSDKは一切組み込まれていません。</li>
-        <li><strong>外部送信なし:</strong> 撮影・録音データを本アプリから開発者のサーバーへ自動送信しません。</li>
-        <li><strong>ユーザーによる明示的共有:</strong> ユーザー自身がアプリ内の共有機能を用いて能動的に指定先へ送信した場合にのみ、データが共有されます。</li>
-    </ul>
-
-    <h2>3. 保存と削除</h2><p>記録ファイルはファイル画面から削除できます。共有メディア領域や共有先のコピーは各保存先で削除してください。試用回数、購入の確認状態、設定、端末内の利用集計は端末内に保存します。バックアップ対象データはAndroidのバックアップ設定に従うことがあります。決済記録はGoogle Playで管理されます。</p>
-<h2>4. お問い合わせ窓口</h2>
-    <p>本プライバシーポリシーまたは本アプリにおけるデータの取り扱いに関するご質問・ご要望は、下記のお問い合わせ先までご連絡ください。</p>
-    <ul>
-        <li><strong>開発元:</strong> estechfy</li>
-        <li><strong>メールアドレス:</strong> <a href="mailto:support@estechfy.com">support@estechfy.com</a></li>
-    </ul>
-
-    <footer>
-        &copy; 2026 estechfy. All rights reserved.
-    </footer>
-</div>
-
+    <p>© 2026 estechfy · Bg (BgRec)</p>
+  </footer>
 </body>
 </html>

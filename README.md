@@ -42,9 +42,13 @@ public/
 │       ├── dareka-logo.png
 │       └── site.css
 └── bg/                        # Bg（BgRec：バックグラウンド録画・録音アプリ）
-    ├── index.html             # Bg プライバシーポリシー
-    └── privacy/
-        └── index.html         # Bg プライバシーポリシー（プロジェクトURL）
+    ├── README.md              # Bg プライバシーポリシー原稿
+    ├── index.html             # Bg 公式紹介 & サポート案内 (#support)
+    ├── privacy/
+    │   └── index.html         # Bg プライバシーポリシー
+    └── assets/
+        ├── bg-logo.png
+        └── site.css
 ```
 
 ---
@@ -65,7 +69,9 @@ public/
 | **Dareka** | 利用規約 | `https://estechfy.github.io/public/dareka/terms/` |
 | **Dareka** | アカウント・データ削除案内 | `https://estechfy.github.io/public/dareka/delete-account/` |
 | **Dareka** | ロゴPNG（512×512） | `https://estechfy.github.io/public/dareka/assets/dareka-logo.png` |
-| **Bg (BgRec)** | プライバシーポリシー | `https://estechfy.github.io/public/bg/privacy/` （`https://estechfy.github.io/public/bg/`） |
+| **Bg (BgRec)** | 公式ホームページ & サポート | `https://estechfy.github.io/public/bg/` |
+| **Bg (BgRec)** | プライバシーポリシー | `https://estechfy.github.io/public/bg/privacy/` |
+| **Bg (BgRec)** | ロゴPNG（512×512） | `https://estechfy.github.io/public/bg/assets/bg-logo.png` |
 
 ---
 
