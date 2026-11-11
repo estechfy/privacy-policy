@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Dareka（com.estechfy.dareka）のプライバシーポリシー。扱う情報、各権限（着信識別・通話履歴・連絡先・カメラ・Google Drive appDataFolder）の利用目的、Googleユーザーデータの保護、およびアカウント・データの削除方法を説明します。">
+  <title>プライバシーポリシー | Dareka</title>
+  <link rel="canonical" href="https://estechfy.github.io/public/dareka/privacy/">
+  <link rel="icon" type="image/png" href="../assets/dareka-logo.png">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">本文へ移動</a>
+  <header class="wrap top">
+    <a class="brand" href="../"><img src="../assets/dareka-logo.png" width="40" height="40" alt="">Dareka</a>
+    <nav aria-label="ナビゲーション">
+      <a href="../">ホーム</a>
+      <a href="../privacy/">プライバシーポリシー</a>
+      <a href="../terms/">利用規約</a>
+      <a href="../delete-account/">データ削除案内</a>
+      <a href="../#support">サポート</a>
+    </nav>
+  </header>
+  <main class="wrap article" id="main">
+    <span class="eyebrow">DAREKA · PRIVACY POLICY</span>
+    <h1>プライバシーポリシー</h1>
+    <p class="meta">
+      アプリ名：Dareka（パッケージ名：<code>com.estechfy.dareka</code>）<br>
+      提供者：estechfy（Estechfy合同会社）<br>
+      制定・最終改定日：2026年11月11日<br>
+      お問い合わせ：<a href="mailto:support@estechfy.com">support@estechfy.com</a>
+    </p>
+
+    <p>本プライバシーポリシーは、estechfy（以下「当方」）が提供する名刺管理・専用プライベート電話帳・発信者番号識別（着信表示）アプリケーション「Dareka」（以下「本アプリ」）における利用者情報・権限の取り扱い、保存・外部通信の範囲、および利用者ご自身によるデータの削除方法について説明します。</p>
+
+    <div class="notice">
+      <p><strong>広告ゼロ・開発者サーバーへの連絡先収集なし：</strong><br>
+      本アプリには第三者広告SDKや行動追跡SDKは一切含まれていません。登録した名刺・画像・プライベート電話帳は、ログイン中のGoogleアカウント専用の端末内領域と、利用者ご自身のGoogle Drive非公開アプリ専用領域（<code>appDataFolder</code>）のみで管理され、当方や第三者のサーバーへ連絡先・名刺・通話履歴データを収集・販売することは一切ありません。</p>
+    </div>
+
+    <nav class="toc" aria-label="目次">
+      <ol>
+        <li><a href="#permissions">扱う情報と各権限の利用目的（顕著な開示）</a></li>
+        <li><a href="#network">外部通信が発生する機能とデータ保存設計</a></li>
+        <li><a href="#google-policy">Googleユーザーデータの利用制限（Limited Use）</a></li>
+        <li><a href="#deletion">データの保持期間と削除方法（アカウント・クラウドデータ削除）</a></li>
+        <li><a href="#disclaimer">免責事項（発信番号偽装に関するご注意）</a></li>
+        <li><a href="#contact">お問い合わせ・改定</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="permissions">1. 本アプリで扱う情報と各権限の利用目的（顕著な開示）</h2>
+
+    <h3>(1) Googleアカウント認証および Google Drive 非公開領域（<code>openid</code>, <code>email</code>, <code>https://www.googleapis.com/auth/drive.appdata</code>）［必須］</h3>
+    <ul>
+      <li><strong>扱う情報：</strong>Googleアカウントの一意識別子・メールアドレス、および利用者が本アプリに登録した名刺情報・名刺表裏画像・ゴミ箱データ・プライベート電話帳・Dareka着信記録（記録設定が有効な場合）。</li>
+      <li><strong>利用目的：</strong>端末内でアカウントごとに専用のデータベース領域を分離管理するため、および利用者ご自身の Google Drive 内の非公開アプリ専用領域（<code>appDataFolder</code>）へ自動バックアップ・復元を行うために使用します。</li>
+      <li><strong>アクセス範囲：</strong>本アプリ専用の非公開領域（<code>appDataFolder</code>）のみにアクセスし、利用者の Google Drive 上の他の一般ファイルやフォルダには一切アクセスしません。</li>
+    </ul>
+
+    <h3>(2) 着信識別ロール（<code>ROLE_CALL_SCREENING</code> / <code>DarekaCallScreeningService</code>）［推奨］</h3>
+    <ul>
+      <li><strong>扱う情報：</strong>電話着信時にOSから渡される着信電話番号。</li>
+      <li><strong>利用目的：</strong>端末内の登録済み名刺、プライベート電話帳、公開番号辞書（公的機関・主要企業・迷惑電話注意データ）、および（許可されている場合）端末の連絡先と端末内で照合し、発信者の会社名・部署・役職・氏名・注意カテゴリを着信ポップアップまたは通知で表示するために使用します。</li>
+      <li><strong>通話の非遮断：</strong>本アプリが着信を自動的に拒否・遮断（ブロック）することはありません。</li>
+    </ul>
+
+    <h3>(3) 通話履歴の参照（<code>android.permission.READ_CALL_LOG</code>）［任意］</h3>
+    <ul>
+      <li><strong>扱う情報：</strong>端末内の通話履歴（電話番号・発着信日時・通話種別・通話時間）。</li>
+      <li><strong>利用目的：</strong>着信履歴タブにおいて発着信・不在着信ログを表示し、登録済みの名刺やプライベート電話帳の名前と照合して表示するため、また未登録の電話番号をワンタップでプライベート電話帳や名刺へ登録できるようにするために使用します。</li>
+      <li><strong>保存・送信に関する厳格な制限：</strong>OSの通話履歴リスト自体（利用者が自ら登録を選択していない番号や発着信日時・通話時間）を本アプリのデータベースへ複製保存したり、Google Drive や外部サーバーへ送信・アップロードすることは一切ありません。利用者が自ら選択してプライベート電話帳や名刺に登録した番号・表示名のみが保存および Google Drive 自動バックアップの対象となります。</li>
+    </ul>
+
+    <h3>(4) 端末の連絡先照合（<code>android.permission.READ_CONTACTS</code>）［任意］</h3>
+    <ul>
+      <li><strong>扱う情報：</strong>端末の標準連絡先に登録されている電話番号と表示名。</li>
+      <li><strong>利用目的：</strong>着信時および着信履歴画面で、電話番号が端末の標準連絡先に登録されている場合にその表示名を参照・表示するために使用します。</li>
+      <li><strong>保存・送信に関する厳格な制限：</strong>端末の標準連絡先リストを外部サーバーや Google Drive へ送信・アップロードすることは一切ありません。すべての照合処理は端末内で完結します。</li>
+    </ul>
+
+    <h3>(5) 他のアプリの上に重ねて表示（<code>android.permission.SYSTEM_ALERT_WINDOW</code>）［任意］</h3>
+    <ul>
+      <li><strong>利用目的：</strong>電話着信時に他のアプリやロック画面の前面へ、発信者の名刺情報・プライベート電話帳カードをポップアップ表示するためにのみ使用します。</li>
+    </ul>
+
+    <h3>(6) 通知へのアクセス（<code>android.permission.BIND_NOTIFICATION_LISTENER_SERVICE</code> / 楽天Link対応）［任意］</h3>
+    <ul>
+      <li><strong>扱う情報：</strong>利用者が「設定」で「楽天Linkの着信にも対応」を有効にした場合のみ、Rakuten Link アプリ（<code>jp.co.rakuten.mobile.rcs</code>）の着信通知に含まれる電話番号。</li>
+      <li><strong>利用目的：</strong>標準の電話回線だけでなく Rakuten Link 着信時にも発信者情報をポップアップ表示するために使用します。他アプリの通知内容は一切読み取り・保存・外部送信しません。</li>
+    </ul>
+
+    <h3>(7) カメラ（<code>android.permission.CAMERA</code>）および端末内AI文字認識（OCR）［任意］</h3>
+    <ul>
+      <li><strong>扱う情報：</strong>撮影した名刺の表面・裏面画像および認識テキスト。</li>
+      <li><strong>利用目的：</strong>名刺の撮影および氏名・会社名・部署・役職・連絡先の自動解析のために使用します。</li>
+      <li><strong>処理方式：</strong>文字認識および項目解析は端末内のOS標準機能（Android: Google Play 開発者サービス ML Kit Text Recognition / iOS: Apple Vision Framework）と内蔵辞書によりオフラインで実行されます。APIキーの登録や外部AIサーバーへの画像送信は不要です。</li>
+    </ul>
+
+    <h2 id="network">2. 外部通信が発生する機能とデータの保存設計</h2>
+    <ul>
+      <li><strong>Google Drive（<code>appDataFolder</code>）への自動バックアップ通信（HTTPS暗号化）：</strong>ログイン中のアカウントで名刺やプライベート電話帳を追加・更新・削除すると、HTTPS通信により利用者ご自身の Google Drive（<code>appDataFolder</code>）へ自動保存されます。</li>
+      <li><strong>Android OS 標準バックアップの無効化：</strong>本アプリは <code>android:allowBackup="false"</code> を設定しており、本アプリのアカウント分離管理外で Android OS 標準の自動バックアップによりデータベースが複製されることはありません。</li>
+      <li><strong>未登録番号の自動検索（初期状態：OFF）および手動Web検索：</strong>「設定」画面で「未登録番号を自動検索」を利用者が明示的にONにした場合のみ、未登録番号からの着信時に該当電話番号を Google 検索へ送信します（初期状態はOFFです）。また、利用者が手動で「Webで番号検索」「マップで開く」「郵便番号から住所入力（zipcloud API）」を実行した場合は、該当する検索文字列・郵便番号を各サービスへ送信します。</li>
+      <li><strong>アプリ更新・公開番号辞書のバージョン確認：</strong>アプリの起動・復帰時に最新バージョン情報を確認するため配信定義URLへ接続します（個人データは一切送信しません）。</li>
+    </ul>
+
+    <h2 id="google-policy">3. Googleユーザーデータの利用制限（Limited Use）</h2>
+    <p>本アプリが Google API から受け取る情報の利用および他のアプリへの転送は、<a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>（Limited Use 要件を含む）に準拠します。Googleユーザーデータを第三者へ販売したり、広告配信・ターゲティング・信用判断・AIモデルの学習に利用することは一切ありません。</p>
+
+    <h2 id="deletion">4. データの保持期間と削除方法（アカウントデータおよびクラウド保存データの削除）</h2>
+    <p>利用者は、本アプリ内のデータおよび Google Drive（<code>appDataFolder</code>）に保存されたデータをいつでも削除できます（専用案内ページ：<a href="../delete-account/">アカウント・データ削除手順</a>）。</p>
+    <ul>
+      <li><strong>アプリ内での個別削除：</strong>名刺、ゴミ箱、プライベート電話帳、Dareka着信記録（最大1,000件）はアプリ内からいつでも削除できます。</li>
+      <li><strong>アプリ内からの「アカウントデータの完全削除」（端末＋Google Drive 一括削除）：</strong>アプリ内の「<strong>設定</strong>」＞「<strong>アカウントデータの完全削除</strong>」を実行すると、端末内のアカウント専用データ（名刺・画像・ゴミ箱・プライベート電話帳・Dareka着信記録）および Google Drive（<code>appDataFolder</code>）上のすべての自動保存スナップショットを即座に完全削除し、ログアウトできます。</li>
+      <li><strong>アンインストール後の Web からの削除手順：</strong>アプリをアンインストールした後でも、PCブラウザ版 <a href="https://drive.google.com/">Google Drive</a> の「設定（歯車アイコン）」＞「設定」＞「アプリの管理」＞「Dareka」＞「オプション」＞「非表示のアプリデータを削除」からクラウド上のデータを完全に削除でき、<a href="https://myaccount.google.com/connections">Googleアカウントのサードパーティ接続管理</a> から「Dareka」のアクセス権をいつでも解除できます。</li>
+    </ul>
+
+    <h2 id="disclaimer">5. 免責事項（発信番号偽装に関するご注意）</h2>
+    <p>着信時に表示される発信者電話番号は、通信経路上で技術的に偽装（スプーフィング）される可能性があります。名刺・プライベート電話帳・公開番号辞書との一致表示は発信者本人の真正性や安全性を保証するものではありません。金銭や暗証番号・個人情報を求める不審な電話には十分ご注意ください。</p>
+
+    <h2 id="contact">6. お問い合わせ窓口・ポリシーの変更</h2>
+    <p>本ポリシーに関するお問い合わせは <a href="mailto:support@estechfy.com">support@estechfy.com</a> までご連絡ください。本ポリシーを変更する場合は、本ページおよびアプリ内の「プライバシーと権限のご案内」画面にて改定日とともに公表します。</p>
+  </main>
+  <footer class="wrap footer">
+    <div class="links">
+      <a href="../privacy/">プライバシーポリシー</a>
+      <a href="../terms/">利用規約</a>
+      <a href="../delete-account/">データ削除案内</a>
+      <a href="../../apps/">アプリ公開情報一覧</a>
+    </div>
+    <p>© 2026 estechfy · Dareka</p>
+  </footer>
+</body>
+</html>

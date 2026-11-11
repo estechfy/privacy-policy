@@ -1,29 +1,46 @@
-# estechfy アプリ公開情報
+# estechfy アプリ公開情報（プロジェクト別公開リポジトリ）
 
-ホームページ、プライバシーポリシー、利用規約、公開用ロゴを管理する公開リポジトリです。GitHub Pagesはmainブランチのルートを配信します。
+プロジェクト（アプリ）単位でホームページ、プライバシーポリシー、利用規約、アカウント・データ削除案内、公開用ロゴを管理する公開リポジトリです。GitHub Pages は `main` ブランチのルートを配信します。
 
-## 公開URL
+## ディレクトリ構成（プロジェクト単位）
 
-| 用途 | URL |
-| --- | --- |
-| 公開情報一覧 | https://estechfy.github.io/privacy-policy/apps/ |
-| FastPlayer ホーム | https://estechfy.github.io/privacy-policy/fastplayer/ |
-| FastPlayer プライバシーポリシー | https://estechfy.github.io/privacy-policy/fastplayer/privacy/ |
-| FastPlayer 利用規約 | https://estechfy.github.io/privacy-policy/fastplayer/terms/ |
-| FastPlayer ロゴPNG | https://estechfy.github.io/privacy-policy/fastplayer/assets/fastplayer-logo.png |
-| Bg（BgRec）ポリシー（既存URL） | https://estechfy.github.io/privacy-policy/ |
+```text
+public/
+├── apps/                     # 全プロジェクト一覧ポータル
+├── dareka/                   # Dareka（名刺管理・着信表示・プライベート電話帳: com.estechfy.dareka）
+│   ├── index.html            # Dareka ホーム
+│   ├── privacy/index.html    # Dareka プライバシーポリシー
+│   ├── terms/index.html      # Dareka 利用規約
+│   ├── delete-account/       # Dareka アカウント・データ削除手順（Google Play Data Safety 対応）
+│   └── assets/               # Dareka 公開ロゴ（512×512 PNG）
+├── fastplayer/               # FastPlayer（Mac向け動画再生・字幕学習・動画保護）
+│   ├── index.html            # FastPlayer ホーム
+│   ├── privacy/index.html    # FastPlayer プライバシーポリシー
+│   ├── terms/index.html      # FastPlayer 利用規約
+│   └── assets/               # FastPlayer 公開ロゴ
+└── bg/                       # Bg（BgRec：録画・録音アプリ）
+    └── privacy/index.html    # Bg プライバシーポリシー（ルート index.html も後方互換のため維持）
+```
+
+## 公開URL（GitHub Pages）
+
+| プロジェクト | 用途 | URL |
+| :--- | :--- | :--- |
+| **全体** | 公開情報一覧 | https://estechfy.github.io/public/apps/ |
+| **Dareka** | ホーム | https://estechfy.github.io/public/dareka/ |
+| **Dareka** | プライバシーポリシー | https://estechfy.github.io/public/dareka/privacy/ |
+| **Dareka** | 利用規約 | https://estechfy.github.io/public/dareka/terms/ |
+| **Dareka** | アカウント・データ削除案内 | https://estechfy.github.io/public/dareka/delete-account/ |
+| **Dareka** | ロゴPNG（512×512） | https://estechfy.github.io/public/dareka/assets/dareka-logo.png |
+| **FastPlayer** | ホーム | https://estechfy.github.io/public/fastplayer/ |
+| **FastPlayer** | プライバシーポリシー | https://estechfy.github.io/public/fastplayer/privacy/ |
+| **FastPlayer** | 利用規約 | https://estechfy.github.io/public/fastplayer/terms/ |
+| **FastPlayer** | ロゴPNG（512×512） | https://estechfy.github.io/public/fastplayer/assets/fastplayer-logo.png |
+| **Bg（BgRec）** | プライバシーポリシー | https://estechfy.github.io/public/bg/privacy/ （旧URL: https://estechfy.github.io/public/ ） |
 
 ## 管理方針
 
-- アプリごとの公開資料を専用フォルダにまとめ、既存URLを維持します。
-- ルートindex.htmlは既存のBgポリシーです。更新済み原稿はBG_README.mdです。
-- FastPlayerでは動画本体を送信せず、動画鍵と識別情報を本人のDriveアプリ専用領域へ保存します。「完全オフライン」「外部送信なし」と一括で説明しません。
-- 公開してよいページと画像だけを保存します。アプリの非公開ソース、OAuthクライアント設定、認証トークン、動画鍵、利用者の動画、開発ログは含めません。
-- ロゴなどの識別素材とオープンソース部品のライセンスは別です。部品情報は https://github.com/estechfy/fastplayer-compliance を参照してください。
-
-## Google OAuthへの登録
-
-ホーム・プライバシー・利用規約には上記のGitHub Pages URLを使用します。ロゴはPNG、512×512px、1MB未満です。
-Googleのブランド確認ではサイト所有権の確認も必要です。Google Search Consoleの案内に従い、実際に管理しているestechfy.github.ioの公開領域を確認してください。Googleが発行する確認用HTMLやメタタグは取得してから追加し、github.io全体を所有していると申告しないでください。
+- アプリごとの公開資料を専用フォルダ（`dareka/`、`fastplayer/`、`bg/`）にまとめ、既存URLとの後方互換も維持します。
+- 公開してよいページと画像だけを保存します。アプリの非公開ソース、OAuthクライアント秘密情報、認証トークン、利用者のデータ、開発ログは含めません。
 
 お問い合わせ：support@estechfy.com

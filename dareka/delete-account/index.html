@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Dareka（com.estechfy.dareka）におけるアカウントデータおよびGoogle Drive保存データの削除手順。">
+  <title>アカウントおよびデータの削除手順 | Dareka</title>
+  <link rel="canonical" href="https://estechfy.github.io/public/dareka/delete-account/">
+  <link rel="icon" type="image/png" href="../assets/dareka-logo.png">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">本文へ移動</a>
+  <header class="wrap top">
+    <a class="brand" href="../"><img src="../assets/dareka-logo.png" width="40" height="40" alt="">Dareka</a>
+    <nav aria-label="ナビゲーション">
+      <a href="../">ホーム</a>
+      <a href="../privacy/">プライバシーポリシー</a>
+      <a href="../terms/">利用規約</a>
+      <a href="../delete-account/">データ削除案内</a>
+    </nav>
+  </header>
+  <main class="wrap article" id="main">
+    <span class="eyebrow">DAREKA · ACCOUNT &amp; DATA DELETION</span>
+    <h1>アカウントおよび保存データの削除手順</h1>
+    <p class="meta">
+      対象アプリ：Dareka（<code>com.estechfy.dareka</code>）<br>
+      提供者：estechfy（Estechfy合同会社）<br>
+      お問い合わせ：<a href="mailto:support@estechfy.com">support@estechfy.com</a>
+    </p>
+
+    <p>Darekaでは、開発者独自のサーバーへ利用者の名刺や電話帳データを収集・保管することはありません。すべてのデータは「端末内のアカウント専用領域」および「利用者ご自身の Google Drive 非公開アプリ専用領域（<code>appDataFolder</code>）」にのみ保存されます。以下の手順でいつでもデータを完全に削除できます。</p>
+
+    <h2>方法1：Darekaアプリ内から一括で完全削除する（推奨）</h2>
+    <ol>
+      <li>Darekaアプリの右上にある「<strong>設定（歯車アイコン）</strong>」を開きます。</li>
+      <li>画面下部の「プライバシー・データ管理」セクションにある「<strong>アカウントデータの完全削除</strong>」をタップします。</li>
+      <li>確認ダイアログで「<strong>完全に削除する</strong>」をタップします。</li>
+    </ol>
+    <p><strong>削除されるデータ：</strong></p>
+    <ul>
+      <li>この端末内のログイン中アカウントに紐づく名刺データ、名刺表裏画像、ゴミ箱データ、プライベート電話帳、Dareka着信記録</li>
+      <li>ご自身の Google Drive（<code>appDataFolder</code>）上に保存されたすべての自動バックアップスナップショット</li>
+      <li>アプリ内のGoogleサインインセッション（自動的にログアウトされます）</li>
+    </ul>
+    <p class="small">※端末OSの標準連絡先（電話帳）やOS標準の通話履歴は削除されません。</p>
+
+    <h2>方法2：アプリをアンインストールした後に Web（Google公式画面）から削除する</h2>
+    <p>すでに端末からDarekaをアンインストールしている場合でも、ご自身のGoogleアカウントから直接クラウド保存データの削除および連携解除を行えます。</p>
+    <ol>
+      <li><strong>Google Drive 上のアプリ専用データの削除：</strong><br>
+        PCブラウザで <a href="https://drive.google.com/">Google Drive</a> を開き、右上の「<strong>設定（歯車アイコン）</strong>」＞「<strong>設定</strong>」＞左メニュー「<strong>アプリの管理</strong>」＞「<strong>Dareka</strong>」の「<strong>オプション</strong>」＞「<strong>非表示のアプリデータを削除</strong>」を選択します。</li>
+      <li><strong>Googleアカウント連携（アクセス権）の解除：</strong><br>
+        <a href="https://myaccount.google.com/connections">Googleアカウントのサードパーティ接続管理</a> を開き、「<strong>Dareka</strong>」を選択して「アクセス権を削除」を実行します。</li>
+    </ol>
+
+    <h2>方法3：一部のデータのみを個別に削除する</h2>
+    <ul>
+      <li><strong>特定の名刺・画像の削除：</strong>名刺詳細画面からゴミ箱へ移動し、ゴミ箱画面で「完全に削除」または「ゴミ箱を空にする」を実行します。</li>
+      <li><strong>プライベート電話帳の番号削除：</strong>プライベート電話帳一覧または詳細シートから対象の番号を個別削除します。</li>
+      <li><strong>Dareka着信記録の削除：</strong>「設定」画面の着信記録削除メニューから着信記録のみを削除できます。</li>
+    </ul>
+  </main>
+  <footer class="wrap footer">
+    <div class="links">
+      <a href="../privacy/">プライバシーポリシー</a>
+      <a href="../terms/">利用規約</a>
+      <a href="../../apps/">アプリ公開情報一覧</a>
+    </div>
+    <p>© 2026 estechfy · Dareka</p>
+  </footer>
+</body>
+</html>
